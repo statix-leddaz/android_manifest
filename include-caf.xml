@@ -18,9 +18,9 @@
 
   <!-- Device -->
   <project path="device/qcom/sepolicy-legacy-um" name="aosp-leddaz/device/qcom/sepolicy" remote="gitlab" revision="udc-legacy-um" />
-  <project path="device/qcom/sepolicy" name="aosp-leddaz/device/qcom/sepolicy" remote="gitlab" revision="udc" />
-  <project path="device/qcom/sepolicy_vndr" name="aosp-leddaz/device/qcom/sepolicy_vndr" remote="gitlab" revision="udc" />
-  <project path="device/qcom/sepolicy_vndr-legacy-um" name="aosp-leddaz/device/qcom/sepolicy_vndr" remote="gitlab" revision="udc-legacy-um" />
+  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="staging" />
+  <project path="device/qcom/sepolicy_vndr" name="android_device_qcom_sepolicy_vndr" remote="staging" />
+  <project path="device/qcom/sepolicy_vndr-legacy-um" name="android_device_qcom_sepolicy_vndr" remote="staging" revision="udc-legacy-um" />
 
   <!-- External -->
   <project path="external/json-c" name="android_external_json-c" remote="statix" revision="tm" />

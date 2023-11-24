@@ -24,19 +24,19 @@
           fetch="https://gitlab.com/StatiXOS"
           revision="tm-qpr3" />
 
-  <!-- GitHub (statix-miatoll) -->
-  <remote name="stx-miatoll"
-          fetch="https://github.com/statix-miatoll/"
+  <!-- GitHub (statix-leddaz) -->
+  <remote name="stx-leddaz"
+          fetch="https://github.com/statix-leddaz/"
           revision="udc" />
 
   <!-- ART -->
-  <project path="art" name="android_art" remote="stx-miatoll" />
+  <project path="art" name="android_art" remote="stx-leddaz" />
 
   <!-- Bionic-->
-  <project path="bionic" name="android_bionic" remote="stx-miatoll" />
+  <project path="bionic" name="android_bionic" remote="stx-leddaz" />
 
   <!-- Build -->
-  <project path="build/make" name="android_build" remote="stx-miatoll" groups="pdk" >
+  <project path="build/make" name="android_build" remote="stx-leddaz" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -45,40 +45,40 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/soong" name="android_build_soong" remote="stx-miatoll" groups="pdk,tradefed" >
+  <project path="build/soong" name="android_build_soong" remote="stx-leddaz" groups="pdk,tradefed" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
 
   <!-- Device -->
-  <project path="device/manifests" name="android_device_manifests" remote="stx-miatoll">
+  <project path="device/manifests" name="android_device_manifests" remote="stx-leddaz">
     <linkfile src="build.sh" dest="build.sh" />
   </project>
   <project path="device/statix/sepolicy" name="android_device_statix_sepolicy" remote="staging" />
 
   <!-- External -->
-  <project path="external/gptfdisk" name="android_external_gptfdisk" remote="stx-miatoll" />
-  <project path="external/mksh" name="android_external_mksh" remote="stx-miatoll" />
-  <project path="external/tinycompress" name="android_external_tinycompress" remote="stx-miatoll" />
-  <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="stx-miatoll" />
+  <project path="external/gptfdisk" name="android_external_gptfdisk" remote="stx-leddaz" />
+  <project path="external/mksh" name="android_external_mksh" remote="stx-leddaz" />
+  <project path="external/tinycompress" name="android_external_tinycompress" remote="stx-leddaz" />
+  <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="stx-leddaz" />
 
   <!-- Frameworks -->
-  <project path="frameworks/av" name="android_frameworks_av" remote="stx-miatoll" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="stx-miatoll" />
-  <project path="frameworks/native" name="android_frameworks_native" remote="stx-miatoll" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="stx-leddaz" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="stx-leddaz" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="stx-leddaz" />
 
   <!-- Google Mobile Services -->
   <!-- <project path="vendor/gms" name="ralph950412/google-mobile-services" remote="gitlab" revision="udc" /> -->
 
   <!-- Hardware -->
-  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="stx-miatoll" />
-  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="stx-miatoll" />
-  <project path="hardware/nxp/nfc" name="android_hardware_nxp_nfc" remote="stx-miatoll" />
+  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="stx-leddaz" />
+  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="stx-leddaz" />
+  <project path="hardware/nxp/nfc" name="android_hardware_nxp_nfc" remote="stx-leddaz" />
   <project path="hardware/statix/compat" name="android_hardware_statix_compat" remote="statix" />
   <project path="hardware/statix/interfaces" name="android_hardware_statix_interfaces" remote="statix" />
 
   <!-- Manifest -->
-  <project path="manifest" name="android_manifest" remote="stx-miatoll" />
+  <project path="manifest" name="android_manifest" remote="stx-leddaz" />
 
   <!-- NXP -->
   <project path="vendor/nxp/nfc" name="android_vendor_nxp_nfc" remote="statix" revision="tm"/>
@@ -90,39 +90,39 @@
 
   <!-- Packages -->
   <project path="packages/apps/Flash" name="LeddaZ/android_packages_apps_Flash" remote="github" revision="udc" />
-  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="stx-miatoll" />
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="stx-miatoll" />
+  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="stx-leddaz" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="stx-leddaz" />
   <project path="packages/apps/SystemUIFlagFlipper" name="android_packages_apps_SystemUIFlagFlipper" remote="statix" />
   <project path="packages/apps/Statix/ColorStub" name="android_packages_apps_Statix_ColorStub" remote="statix" />
-  <project path="packages/apps/Statix/Launcher" name="android_packages_apps_Statix_Launcher" remote="stx-miatoll" />
-  <project path="packages/apps/Statix/Settings" name="android_packages_apps_Statix_Settings" remote="stx-miatoll" />
-  <project path="packages/apps/Statix/SystemUI" name="android_packages_apps_Statix_SystemUI" remote="stx-miatoll" />
-  <project path="packages/apps/Statix/ThemePicker" name="android_packages_apps_Statix_ThemePicker" remote="stx-miatoll" />
+  <project path="packages/apps/Statix/Launcher" name="android_packages_apps_Statix_Launcher" remote="stx-leddaz" />
+  <project path="packages/apps/Statix/Settings" name="android_packages_apps_Statix_Settings" remote="stx-leddaz" />
+  <project path="packages/apps/Statix/SystemUI" name="android_packages_apps_Statix_SystemUI" remote="stx-leddaz" />
+  <project path="packages/apps/Statix/ThemePicker" name="android_packages_apps_Statix_ThemePicker" remote="stx-leddaz" />
   <project path="packages/apps/Statix/Wallpapers" name="android_packages_apps_Statix_Wallpapers" remote="statix" />
-  <project path="packages/apps/WallpaperPicker2" name="android_packages_apps_WallpaperPicker2" remote="stx-miatoll" />
-  <project path="packages/modules/Bluetooth" name="android_packages_modules_Bluetooth" remote="stx-miatoll" />
+  <project path="packages/apps/WallpaperPicker2" name="android_packages_apps_WallpaperPicker2" remote="stx-leddaz" />
+  <project path="packages/modules/Bluetooth" name="android_packages_modules_Bluetooth" remote="stx-leddaz" />
   <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="statix" />
 
   <!-- Platform Testing -->
-  <project path="platform_testing" name="android_platform_testing" remote="stx-miatoll" />
+  <project path="platform_testing" name="android_platform_testing" remote="stx-leddaz" />
 
   <!-- Prebuilts -->
   <project path="prebuilts/extract-tools" name="LineageOS/android_prebuilts_extract-tools" remote="github" revision="lineage-20.0" />
 
   <!-- Recovery -->
-  <project path="bootable/recovery" name="android_bootable_recovery" remote="stx-miatoll" />
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="stx-leddaz" />
 
   <!-- System -->
-  <project path="system/core" name="android_system_core" remote="stx-miatoll" />
-  <project path="system/libhidl" name="android_system_libhidl" remote="stx-miatoll" />
-  <project path="system/sepolicy" name="android_system_sepolicy" remote="stx-miatoll" />
+  <project path="system/core" name="android_system_core" remote="stx-leddaz" />
+  <project path="system/libhidl" name="android_system_libhidl" remote="stx-leddaz" />
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="stx-leddaz" />
 
   <!-- Tools -->
   <project path="tools/extract-utils" name="LineageOS/android_tools_extract-utils" remote="github" revision="lineage-20.0" />
 
   <!-- Vendor -->
   <project path="vendor/google/interfaces" name="android_vendor_google_interfaces" remote="statix" />
-  <project path="vendor/statix" name="android_vendor_statix" remote="stx-miatoll">
+  <project path="vendor/statix" name="android_vendor_statix" remote="stx-leddaz">
     <linkfile src="build/stop_scan.mk" dest="kernel/Android.mk" />
   </project>
   <project path="vendor/statix-prebuilts" name="android_vendor_statix-prebuilts" remote="staging" />

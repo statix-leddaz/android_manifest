@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <!-- Github -->
-  <remote  name="github"
-           fetch="https://github.com/" />
+  <!-- GitHub -->
+  <remote name="github"
+          fetch="https://github.com/" />
 
   <!-- GitHub (StatiXOS) -->
-  <remote  name="statix"
-           revision="udc-qpr1"
-           fetch="https://github.com/StatiXOS/" />
+  <remote name="statix"
+          revision="udc-qpr1"
+          fetch="https://github.com/StatiXOS/" />
+
+  <!-- GitHub (statix-leddaz) -->
+  <remote name="statix-leddaz"
+          revision="udc-qpr1"
+          fetch="https://github.com/statix-leddaz/" />
 
   <!-- GitLab -->
   <remote name="gitlab"
-           fetch="https://gitlab.com/" />
+          fetch="https://gitlab.com/" />
 
   <!-- Gitea -->
-  <remote  name="gitea"
-           fetch="https://git.keksla.wtf/" />
+  <remote name="gitea"
+          fetch="https://git.keksla.wtf/" />
 
   <!-- ART -->
   <project path="art" name="android_art" remote="statix" />
@@ -34,7 +39,7 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/soong" name="android_build_soong" remote="statix" groups="pdk,tradefed" >
+  <project path="build/soong" name="android_build_soong" remote="statix-leddaz" groups="pdk,tradefed" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
@@ -50,7 +55,7 @@
 
   <!-- Frameworks -->
   <project path="frameworks/av" name="android_frameworks_av" remote="statix" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="statix" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="statix-leddaz" />
   <project path="frameworks/native" name="android_frameworks_native" remote="statix" />
 
   <!-- Google Mobile Services -->
@@ -64,7 +69,7 @@
   <project path="hardware/statix/interfaces" name="android_hardware_statix_interfaces" remote="statix" />
 
   <!-- Manifest -->
-  <project path="manifest" name="android_manifest" remote="statix" />
+  <project path="manifest" name="android_manifest" remote="statix-leddaz" />
 
   <!-- NXP -->
   <project path="vendor/nxp/nfc" name="android_vendor_nxp_nfc" remote="statix" revision="tm"/>
@@ -75,16 +80,15 @@
   <project path="vendor/nxp/secure_element_extns" name="android_vendor_nxp_secure_element_extns" remote="statix" revision="tm" />
 
   <!-- Packages -->
-  <project path="packages/apps/Aperture" name="android_packages_apps_Aperture" remote="statix" />
+  <project path="packages/apps/Aperture" name="LineageOS/android_packages_apps_Aperture" remote="github" revision="lineage-21.0" />
   <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="statix" />
-  <project path="packages/apps/RepainterServicePriv" name="android_packages_apps_RepainterServicePriv" remote="statix" revision="tm" />
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="statix" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="statix-leddaz" />
   <project path="packages/apps/SystemUIFlagFlipper" name="android_packages_apps_SystemUIFlagFlipper" remote="statix" />
   <project path="packages/apps/SimpleDeviceConfig" name="android_packages_apps_SimpleDeviceConfig" remote="statix" revision="tm" />
   <project path="packages/apps/Statix/ColorStub" name="android_packages_apps_Statix_ColorStub" remote="statix" />
-  <project path="packages/apps/Statix/Launcher" name="android_packages_apps_Statix_Launcher" remote="statix" />
-  <project path="packages/apps/Statix/Settings" name="android_packages_apps_Statix_Settings" remote="statix" />
-  <project path="packages/apps/Statix/SystemUI" name="android_packages_apps_Statix_SystemUI" remote="statix" />
+  <project path="packages/apps/Statix/Launcher" name="android_packages_apps_Statix_Launcher" remote="statix-leddaz" />
+  <project path="packages/apps/Statix/Settings" name="android_packages_apps_Statix_Settings" remote="statix-leddaz" />
+  <project path="packages/apps/Statix/SystemUI" name="android_packages_apps_Statix_SystemUI" remote="statix-leddaz" />
   <project path="packages/apps/Statix/ThemePicker" name="android_packages_apps_Statix_ThemePicker" remote="statix" />
   <project path="packages/apps/Statix/Wallpapers" name="android_packages_apps_Statix_Wallpapers" remote="statix" />
   <project path="packages/apps/WallpaperPicker2" name="android_packages_apps_WallpaperPicker2" remote="statix" />
@@ -101,7 +105,7 @@
   <project path="bootable/recovery" name="android_bootable_recovery" remote="statix" />
 
   <!-- System -->
-  <project path="system/core" name="android_system_core" remote="statix" />
+  <project path="system/core" name="android_system_core" remote="statix-leddaz" />
   <project path="system/libhidl" name="android_system_libhidl" remote="statix" />
   <project path="system/sepolicy" name="android_system_sepolicy" remote="statix" />
 
@@ -110,7 +114,7 @@
 
   <!-- Vendor -->
   <project path="vendor/google/interfaces" name="android_vendor_google_interfaces" remote="statix" />
-  <project path="vendor/statix" name="android_vendor_statix" remote="statix">
+  <project path="vendor/statix" name="android_vendor_statix" remote="statix-leddaz">
     <linkfile src="build/stop_scan.mk" dest="kernel/Android.mk" />
   </project>
   <project path="vendor/statix-prebuilts" name="android_vendor_statix-prebuilts" remote="statix" />

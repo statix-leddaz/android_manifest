@@ -86,10 +86,11 @@
   <remove-project name="device/sample" />
 
   <!-- External -->
+  <remove-project name="platform/external/e2fsprogs" />
   <remove-project name="platform/external/gptfdisk" />
   <remove-project name="platform/external/mksh" />
+  <remove-project name="platform/external/skia" />
   <remove-project name="platform/external/tinycompress" />
-  <remove-project name="platform/external/e2fsprogs" />
   <remove-project name="platform/external/wpa_supplicant_8" />
 
   <!-- Frameworks -->

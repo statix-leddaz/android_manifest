@@ -28,6 +28,11 @@
            revision="vic"
            fetch="https://github.com/statix-leddaz/" />
 
+  <!-- GitLab (aosp-leddaz) -->
+  <remote name="aosp-leddaz"
+          fetch="https://gitlab.com/aosp-leddaz/"
+          revision="vic" />
+
   <!-- ART -->
   <project path="art" name="android_art" remote="statix-staging" />
 

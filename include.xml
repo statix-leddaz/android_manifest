@@ -80,7 +80,7 @@
   <project path="hardware/libhardware" name="android_hardware_libhardware" remote="statix-staging" />
   <project path="hardware/nxp/nfc" name="android_hardware_nxp_nfc" remote="statix-staging" />
   <project path="hardware/statix/compat" name="android_hardware_statix_compat" remote="statix-leddaz" />
-  <project path="hardware/statix/interfaces" name="android_hardware_statix_interfaces" remote="statix" />
+  <project path="hardware/statix/interfaces" name="leddaz-stuff/android_hardware_statix_interfaces" remote="github" revision="vic" />
 
   <!-- Manifest -->
   <project path="manifest" name="android_manifest" remote="statix-leddaz" />

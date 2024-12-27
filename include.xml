@@ -53,6 +53,7 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
+  <project path="build/release" name="android_build_release" remote="stx-leddaz" groups="pdk,tradefed" />
 
   <!-- Device -->
   <project path="device/manifests" name="android_device_manifests" remote="stx-leddaz" revision="vic">
